@@ -19,4 +19,4 @@ Obtain WIFI configured parameters from router instead of using Harcoded ones
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/jazzran/ZTEF680_Wifi_En/blob/master/Contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.
