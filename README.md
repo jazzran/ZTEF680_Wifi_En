@@ -15,6 +15,7 @@ Python tool for enabling and disabling WIFI remotely in ZTE F680 routers
 Wifi parameters are Hardcoded. Default settings: Spain Bands. If you need to update it with your settings you need to edit the ZTE.py file
 
 # Future evolutions
+Extraxt settings to only one centralized point.
 Obtain WIFI configured parameters from router instead of using Harcoded ones 
 
 ## Contributing
