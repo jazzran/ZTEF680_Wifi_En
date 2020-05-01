@@ -2,7 +2,7 @@
 
 Python tool for enabling and disabling WIFI remotely in ZTE F680 routers
 
-#How it works
+# How it works
 1 Obtain LoginToken for doing authentication
 2 Generate Hash and random value for authentication
 3 Using loginToken obtains SID cookie value
