@@ -5,7 +5,7 @@ Python tool for enabling and disabling WIFI remotely in ZTE F680 routers
 # Execution example
 
 ```
-./wifichange.py -p testPass -e 1 -t 2 -u 1234 
+./wifichange.py -p testPass -e 1 -t 2 -u 1234 -i 192.168.0.1
 ```
 
 # How it works
