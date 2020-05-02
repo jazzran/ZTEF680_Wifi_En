@@ -1,6 +1,7 @@
 # ZTEF680_Wifi_En
 
-Python tool for enabling and disabling WIFI remotely in ZTE F680 routers
+Python tool for enabling and disabling WIFI remotely in ZTE F680 routers.
+Support for Python3 & 2
 
 ## Execution example
 
@@ -22,7 +23,7 @@ Wifi parameters are Hardcoded. Default settings: Spain Bands. If you need to upd
 
 ## Future evolutions
 
-Migrate to Python3
+~~Migrate to Python3~~
 
 Extract settings to only one centralized point.
 
