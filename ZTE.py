@@ -74,9 +74,12 @@ def getSessionToken(address,SID):
         req = urllib.request.Request(url)
     
     response = opener.open(req)
-        
-    encoding = response.info().get_param('charset', 'utf8')
-    d = response.read().decode(encoding, errors="ignore")
+    
+    try:
+        encoding = response.info().get_param('charset', 'utf8')
+        d = response.read().decode(encoding, errors="ignore")
+    except AttributeError:
+        d = response.read()
     
     opener.close()
 
@@ -104,8 +107,11 @@ def getLoginToken(address):
     url = 'http://'+address+'/'
     response = opener.open(url)
     #d = response.read()
-    encoding = response.info().get_param('charset', 'utf8')
-    d = response.read().decode(encoding, errors="ignore")
+    try:
+        encoding = response.info().get_param('charset', 'utf8')
+        d = response.read().decode(encoding, errors="ignore")
+    except AttributeError:
+        d = response.read()
     
     opener.close()
     try:
