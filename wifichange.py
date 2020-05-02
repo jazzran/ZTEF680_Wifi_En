@@ -6,12 +6,12 @@ from ZTE import *
 
 
 def printHelp():
-    print 'wifichange.py  -p <password> [ -i <address> -u <user> -t <technology> -e <state> ]'
-    print 'password: router password. Mandatory parameter'
-    print 'user(optional): router user, default: 1234'
-    print 'address(optional): router address, default: 192.168.1.1'
-    print 'technology (optional): 0-> all(default), 1-> 2G, 2-> 5G'
-    print 'state (optional): 0-> disable, 1-> enable(default)'
+    print ('wifichange.py  -p <password> [ -i <address> -u <user> -t <technology> -e <state> ]')
+    print ('password: router password. Mandatory parameter')
+    print ('user(optional): router user, default: 1234')
+    print ('address(optional): router address, default: 192.168.1.1')
+    print ('technology (optional): 0-> all(default), 1-> 2G, 2-> 5G')
+    print ('state (optional): 0-> disable, 1-> enable(default)')
     return
 
     
@@ -23,28 +23,28 @@ def changeStatus( ipAddress, user, password, enable, technologies):
 
     if (technologies == '0') : #All
         if (enable == '1'):
-            #print 'enable All'
+            #print ('enable All')
             enable2G(ipAddress,SID,session_token)
             enable5G(ipAddress,SID,session_token)
         else:
-            #print 'disable All'
+            #print ('disable All')
             disable2G(ipAddress,SID,session_token)
             disable5G(ipAddress,SID,session_token)
     
     if (technologies == '1') : #2G
         if (enable == '1'):
-            #print 'enable 2G'
+            #print ('enable 2G')
             enable2G(ipAddress,SID,session_token)
         else:
-            #print 'disable 2G'
+            #print ('disable 2G')
             disable2G(ipAddress,SID,session_token)
             
     if (technologies == '2') : #5G
         if (enable =='1'):
-            #print 'enable 5G'
+            #print ('enable 5G')
             enable5G(ipAddress,SID,session_token)
         else:
-            #print 'disable 5G'
+            #print ('disable 5G')
             disable5G(ipAddress,SID,session_token)
 
     #disable2G(ipAddress,SID,session_token)
@@ -85,7 +85,7 @@ def main(argv):
          password = arg
    
    if (password == None):
-    print "Error password is a mandatory parameter"
+    print ("Error password is a mandatory parameter")
     printHelp()
     sys.exit()
    
