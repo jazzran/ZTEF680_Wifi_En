@@ -14,7 +14,7 @@ def printHelp():
     print ('state (optional): 0-> disable, 1-> enable(default)')
     return
 
-    
+
 def changeStatus( ipAddress, user, password, enable, technologies):
 
     SID = getSID (ipAddress,user,password,getLoginToken(ipAddress))
@@ -30,13 +30,13 @@ def changeStatus( ipAddress, user, password, enable, technologies):
             session_token = getSessionToken(ipAddress,SID)
             enable2G(ipAddress,SID,session_token)
         else:
-            #print ('disable All')
+           #print ('disable All')
             disable5G(ipAddress,SID,session_token)
             logout(ipAddress,SID,session_token)
             SID = getSID (ipAddress,user,password,getLoginToken(ipAddress))
             session_token = getSessionToken(ipAddress,SID)
             disable2G(ipAddress,SID,session_token)
-    
+
     if (technologies == '1') : #2G
         if (enable == '1'):
             #print ('enable 2G')
