@@ -30,6 +30,7 @@ def changeStatus( ipAddress, user, password, enable, technologies):
             session_token = getSessionToken(ipAddress,SID)
             enable2G(ipAddress,SID,session_token)
         else:
+           #print ('disable All')
             disable5G(ipAddress,SID,session_token)
             logout(ipAddress,SID,session_token)
             SID = getSID (ipAddress,user,password,getLoginToken(ipAddress))
