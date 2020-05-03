@@ -24,13 +24,19 @@ def changeStatus( ipAddress, user, password, enable, technologies):
     if (technologies == '0') : #All
         if (enable == '1'):
             #print ('enable All')
-            enable2G(ipAddress,SID,session_token)
             enable5G(ipAddress,SID,session_token)
+            logout(ipAddress,SID,session_token)
+            SID = getSID (ipAddress,user,password,getLoginToken(ipAddress))
+            session_token = getSessionToken(ipAddress,SID)
+            enable2G(ipAddress,SID,session_token)
         else:
             #print ('disable All')
-            disable2G(ipAddress,SID,session_token)
             disable5G(ipAddress,SID,session_token)
-    
+            logout(ipAddress,SID,session_token)
+            SID = getSID (ipAddress,user,password,getLoginToken(ipAddress))
+            session_token = getSessionToken(ipAddress,SID)
+            disable2G(ipAddress,SID,session_token)
+
     if (technologies == '1') : #2G
         if (enable == '1'):
             #print ('enable 2G')
