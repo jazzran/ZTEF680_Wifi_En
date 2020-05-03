@@ -9,6 +9,7 @@ Python3 & 2 supported
 ```
 ./wifichange.py -p testPass -e 1 -t 2 -u 1234 -i 192.168.0.1
 ```
+This modifies the configuration in router _192.168.0.1_ with user _1234_ and password _testPass_ enabling (_-e 1_) 5G wifi (_-t 2_)
 
 ## How it works
 1. Obtain LoginToken for doing authentication
