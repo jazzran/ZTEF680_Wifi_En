@@ -1,7 +1,8 @@
 # ZTEF680_Wifi_En
 
 Python tool for enabling and disabling WIFI remotely in ZTE F680 routers.
-Support for Python3 & 2
+
+Python3 & 2 supported
 
 ## Execution example
 
