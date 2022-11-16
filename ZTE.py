@@ -131,7 +131,7 @@ def getSID(address,user,password,loginToken):
     #login
     randNumber = round(random.random()*89999999,0)+10000000;
     #print (str (randNumber)[:8])
-    password = hashlib.sha256(('Angel666'+str(randNumber)[:8]).encode('utf-8')).hexdigest()
+    password = hashlib.sha256((password+str(randNumber)[:8]).encode('utf-8')).hexdigest()
     #print (password)
 
     try:
